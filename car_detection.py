@@ -2,7 +2,7 @@
 import cv2
 
 # capture video/ video path
-cap = cv2.VideoCapture('traffic.mp4')
+cap = cv2.VideoCapture('cars.mp4')
 
 #use trained cars XML classifiers
 car_cascade = cv2.CascadeClassifier('haarcascade_cars.xml')
@@ -26,7 +26,7 @@ while True:
         crop_img = frame[y:y+h,x:x+w]
 
      #press Q on keyboard to exit
-    if cv2.waitKey(25) & 0xFF == ord('q'):
+    if cv2.waitKey(10) & 0xFF == ord('q'):
         break
 
 
